@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "docs": "documentation -f md -o docs.md",
-    "lint": "eslint -c eslint.json .",
+    "lint": "eslint -c eslint.json src test",
     "test": "npm run lint && ava test/*",
     "prepublish": "mkdirp dist && babel src --out-dir dist"
   },
