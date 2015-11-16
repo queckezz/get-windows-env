@@ -7,7 +7,11 @@
 [![License][license-image]][license-url]
 [![Js Standard Style][standard-image]][standard-url]
 
-Get a list of system or user environment variables on windows. `process.env` is not enough because you can't differentiate by system or user environment variables.
+Get a list of system or user environment variables on windows.
+
+## Why not just `process.env`?
+
+If you want to  differentiate between user and system variables this package is for you. Otherwise `process.env` is just fine.
 
 ## Example
 
