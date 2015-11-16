@@ -1,6 +1,7 @@
 
 # get-windows-env
 
+[![Build Status][travis-image]][travis-url]
 [![NPM version][version-image]][version-url]
 [![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
@@ -43,6 +44,9 @@ $ npm test
 ## License
 
 [MIT][license-url]
+
+[travis-image]: https://img.shields.io/travis/queckezz/get-windows-env.svg?style=flat-square
+[travis-url]: https://travis-ci.org/queckezz/get-windows-env
 
 [version-image]: https://img.shields.io/npm/v/get-windows-env.svg?style=flat-square
 [version-url]: https://npmjs.org/package/get-windows-env
