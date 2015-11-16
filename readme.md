@@ -11,7 +11,7 @@ Get a list of system or user environment variables on windows.
 
 ## Why not just `process.env`?
 
-If you want to  differentiate between user and system variables this package is for you. Otherwise `process.env` is just fine.
+If you want to  differentiate between user and system variables this package is for you. Otherwise `process.env` works just fine.
 
 ## Example
 
