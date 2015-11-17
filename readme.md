@@ -18,7 +18,10 @@ If you want to  differentiate between user and system variables this package is 
 See [test/index.js](./test/index.js) for full examples.
 
 ```js
-import { getUserEnv, getSystemEnv } from 'get-windows-env'
+import {
+  getUserEnv,
+  getSystemEnv
+} from 'get-windows-env'
 
 getSystemEnv().then(registry => console.log(registry))
 /* =>
@@ -39,7 +42,29 @@ getSystemEnv().then(registry => console.log(registry))
  */
 ```
 
-## Tests
+## API
+
+#### `#getUserEnv()`
+
+Gets all user environment variables.
+
+#### `#getSystemEnv()`
+
+Gets all system environment variables.
+
+#### `#queryRegistry(key)`
+
+Given a registry key, it returns you a matching that path.
+
+#### `#parseRegistry(stdout::String)`
+
+Parses a given registry string from the `queryRegistry()` function to a set of key value pairs  `{ name, type, path }`.
+
+#### `#keys`
+
+Object containing `{ user, system }` registry keys for querying the windows registry.
+
+#### Tests
 
 ```bash
 $ npm test

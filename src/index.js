@@ -62,19 +62,9 @@ function getEnv (key) {
   return queryRegistry(key).then(({ stdout, stderr }) => parseRegistry(stdout))
 }
 
-/**
- * Gets all user environment variables
- * @return {Array} of environment variables as an object with signature `{ name, type, path }`
- */
-
 function getUserEnv () {
   return getEnv(keys.user)
 }
-
-/**
- * Gets all system environment variables
- * @return {Array} of environment variables as an object with signature `{ name, type, path }`
- */
 
 function getSystemEnv () {
   return getEnv(keys.system)
