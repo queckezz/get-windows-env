@@ -8,6 +8,19 @@ import pipe from 'ramda/src/pipe'
 import map from 'ramda/src/map'
 import remove from 'ramda/src/remove'
 
+const keys = {
+  user: join('HKEY_CURRENT_USER', 'Environment'),
+
+  system: join(
+    'HKEY_LOCAL_MACHINE',
+    'SYSTEM',
+    'CurrentControlSet',
+    'Control',
+    'Session Manager',
+    'Environment'
+  )
+}
+
 function exec (command) {
   return new Promise((resolve, reject) => {
     _exec(command, (err, stdout, stderr) => {
@@ -55,8 +68,7 @@ function getEnv (key) {
  */
 
 function getUserEnv () {
-  const key = join('HKEY_CURRENT_USER', 'Environment')
-  return getEnv(key)
+  return getEnv(keys.user)
 }
 
 /**
@@ -65,19 +77,13 @@ function getUserEnv () {
  */
 
 function getSystemEnv () {
-  const key = join(
-    'HKEY_LOCAL_MACHINE',
-    'SYSTEM',
-    'CurrentControlSet',
-    'Control',
-    'Session Manager',
-    'Environment'
-  )
-
-  return getEnv(key)
+  return getEnv(keys.system)
 }
 
 export default {
+  parseRegistry,
+  queryRegistry,
+  getSystemEnv,
   getUserEnv,
-  getSystemEnv
+  keys
 }
