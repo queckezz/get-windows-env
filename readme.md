@@ -54,11 +54,15 @@ Gets all system environment variables.
 
 #### `#queryRegistry(key)`
 
-Given a registry key, it returns you a matching that path.
+Given a registry key, it returns you a string with registry entries, matching that path.
 
-#### `#parseRegistry(stdout::String)`
+#### `#parseRegistry(registry::String)`
 
 Parses a given registry string from the `queryRegistry()` function to a set of key value pairs  `{ name, type, path }`.
+
+```js
+const keys = parseRegistry(queryRegistry(SOME_KEY))
+```
 
 #### `#keys`
 
