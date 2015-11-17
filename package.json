@@ -1,6 +1,6 @@
 {
   "name": "get-windows-env",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Fabian Eichenberger <fabian.eichenberger@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/queckezz/get-windows-env",
